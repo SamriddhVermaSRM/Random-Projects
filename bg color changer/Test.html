@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorChanger</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #f7f7f7;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            border: 2px solid #333;
+            padding: 10px 20px;
+            font-family: 'Arial', sans-serif;
+            cursor: pointer;
+        }
+
+        #red {
+            background-color: #ff3333;
+        }
+
+        #green {
+            background-color: #33cc33;
+        }
+
+        #blue {
+            background-color: #3399ff;
+        }
+
+        .color-inputs {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .color-preview {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #000;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Welcome</h1>
+        <p>This is my colour changing website</p>
+    </div>
+
+    <div class="button-container">
+        <button id="red">Red</button>
+        <button id="green">Green</button>
+        <button id="blue">Blue</button>
+    </div>
+
+    <div class="color-inputs">
+        <input type="text" id="hex" placeholder="Hex-Code" style="padding: 10px; font-size: 16px; font-family: 'Arial', sans-serif;">
+        <input type="color" id="color" class="color-picker">
+    </div>
+
+    
+
+    <script>
+        const body = document.querySelector('body');
+        const colorPreview = document.querySelector('.color-preview');
+
+        document.querySelector('#red').addEventListener('click', function () {
+            body.style.backgroundColor = 'red';
+            body.style.color = 'white';
+            updateColorPreview();
+        });
+
+        document.querySelector('#green').addEventListener('click', function () {
+            body.style.backgroundColor = 'green';
+            body.style.color = 'white';
+            updateColorPreview();
+        });
+
+        document.querySelector('#blue').addEventListener('click', function () {
+            body.style.backgroundColor = 'blue';
+            body.style.color = 'white';
+            updateColorPreview();
+        });
+
+        document.querySelector('#hex').addEventListener('input', function () {
+            body.style.backgroundColor = document.querySelector("#hex").value;
+            body.style.color = 'white';
+            updateColorPreview();
+        });
+
+        document.querySelector('#color').addEventListener('input', function () {
+            body.style.backgroundColor = document.querySelector('#color').value;
+            body.style.color = 'white';
+            updateColorPreview();
+        });
+
+        function updateColorPreview() {
+            colorPreview.style.backgroundColor = body.style.backgroundColor;
+        }
+    </script>
+</body>
+
+</html>
