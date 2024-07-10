@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Playwrite NG Modern';
+}
+
+#switch {
+	position: fixed;
+	right: 0;
+	z-index: -1;
+	display: flex;
+	height: 100px;
+	width: 100px;
+	margin: 0;
+	border-radius: 0 0 0 65%;
+	--bg-color: black;
+	background: var(--bg-color);
+	appearance: none;
+	transition: all 900ms ease-in-out;
+}
+
+#switch:checked {
+	border-radius: 0 0 0 0;
+	height: 100%;
+	width: 100%;
+}
+
+#switch-icon {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	right: 0;
+	height: 80px;
+	width: 80px;
+	padding: 10px;
+	background-image: url('./assets/moon.svg');
+	transition: all 900ms ease-in-out;
+}
+
+#switch:checked ~ #switch-icon {
+	background-image: url('./assets/sunny.svg');
+	rotate: 360deg;
+}
+
+h1 {
+	color: black;
+}
+
+#switch:checked ~ h1 {
+	color: white;
+}
+
+h1 {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	transition: all 900ms ease-in-out;
+}

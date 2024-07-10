@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link
+			rel="stylesheet"
+			href="styles.css"
+		/>
+		<title>Dark Mode</title>
+		<script>
+			function ToggleDarkMode() {
+				let dm_switch = document.getElementById('switch');
+
+				if (dm_switch.hasAttribute('checked')) {
+					dm_switch.removeAttribute('checked');
+				} else {
+					dm_switch.setAttribute('checked', '');
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input
+			id="switch"
+			type="checkbox"
+			disabled
+		/>
+		<div
+			id="switch-icon"
+			onclick="ToggleDarkMode()"
+		></div>
+		<h1>Samriddh Verma</h1>
+	</body>
+</html>
