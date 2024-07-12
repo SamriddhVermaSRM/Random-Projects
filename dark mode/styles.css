@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap');
+
 #switch {
 	/* The Id for the checkbox */
 	position: fixed;
@@ -66,8 +68,6 @@ h1 {
 }
 
 /* not important */
-
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap');
 
 * {
 	box-sizing: border-box;
