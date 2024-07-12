@@ -1,18 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap');
-
-* {
-	box-sizing: border-box;
-}
-
-body {
-	margin: 0;
-	font-family: 'Playwrite NG Modern';
-}
-
 #switch {
+	/* The Id for the checkbox */
 	position: fixed;
 	right: 0;
-	z-index: -1;
+	z-index: -1; /* put it behind everything */
 	display: flex;
 	height: 100px;
 	width: 100px;
@@ -33,6 +23,7 @@ body {
 }
 
 #switch-icon {
+	/* CSS for the icon */
 	position: fixed;
 	z-index: 999;
 	top: 0;
@@ -46,23 +37,24 @@ body {
 }
 
 #switch:checked ~ #switch-icon {
+	/* icon change if the checkbox is checked */
 	background-image: url('./assets/sunny.svg');
 	rotate: 360deg;
 }
 
 main {
+	/* define all your colors as variables */
 	--fontColor: #000;
 }
 
 #switch:checked ~ main {
+	/* define all your dark mode color as variables */
 	--fontColor: #fff;
 }
 
 h1 {
+	/* Your content which uses the color variables */
 	color: var(--fontColor);
-}
-
-h1 {
 	height: 100vh;
 	display: flex;
 	align-items: center;
@@ -71,4 +63,17 @@ h1 {
 	padding: 0;
 	transition: all 900ms ease-in-out;
 	font-size: 65px;
+}
+
+/* not important */
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Playwrite NG Modern';
 }
